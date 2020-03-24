@@ -21,6 +21,13 @@
         background-color: #eef6fc;
         color: #1d72aa;
       }
+      summary {
+        display: block;
+      }
+      form {
+        margin: 2rem 0;
+      }
+
     </style>
   </head>
   <body>
@@ -93,10 +100,63 @@
         </p>
         <h2 class="subtitle">
           <strong>Si vous pouvez proposer de l’aide sur l’un des points listés ci-dessus (fabrication, sourcing, logistique, montage, test, livraison, autre),
-          merci de remplir le formulaire avec le bouton ci-dessous :</strong>
+          merci de remplir le formulaire grâce au bouton ci-dessous :</strong>
         </h2>
         <div>
-          <button class="button is-primary is-link is-large is-fullwidth">JE PEUX AIDER (FORMULAIRE BIENTOT DISPONIBLE)</button>
+          <details>
+            <summary><a class="button is-primary is-link is-large is-fullwidth">JE SOUHAITE AIDER</a></summary>
+
+            <form id="form">
+
+              <div class="field">
+                <label class="label" for="name">Nom</label>
+                <div class="control">
+                  <input class="input" type="text" id="name" name="name">
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label" for="email">Courriel</label>
+                <div class="control has-icons-left">
+                  <input class="input" id="email" name="email" type="email">
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-envelope"></i>
+                  </span>
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label" for="city">Ville</label>
+                <div class="control">
+                  <input class="input" type="text" id="city" name="city">
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label" for="postal">Code postal</label>
+                <div class="control">
+                  <input class="input" type="text" id="postal" name="postal">
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label" for="skills">Compétences</label>
+                <div class="control">
+                  <textarea class="textarea" id="skills" name="skills"></textarea>
+                </div>
+              </div>
+
+              <div class="field is-grouped">
+                <div class="control">
+                  <button class="button is-link">Envoyer</button>
+                </div>
+                <div class="control">
+                  <button class="button is-link is-light">Annuler</button>
+                </div>
+              </div>
+            </form>
+          </details>
+
         </div>
       </div>
     </section>
